@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .custom-container {
+    @apply max-w-[1150px] mx-auto px-3
+  }
+
+  .row {
+    @apply flex flex-row flex-wrap -mx-3
+  }
+
+  .swiper-button-prev {
+    @apply border border-white rounded-full absolute left-[25%] sm:left-0 max-sm:-bottom-[12%] sm:top-1/2 z-50;
+  }
+
+  .swiper-button-next {
+    @apply border border-white rounded-full absolute right-[25%] sm:right-0 max-sm:-bottom-[12%] sm:top-1/2 z-50;
+  }
+
+  .text-stroke-number {
+    -webkit-text-stroke: 1.5px white;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.custom-gradiant {
+  background: linear-gradient(136.39deg, #0076BE 3.65%, #48BF91 89.63%);
+}
+
+.show {
+  left: 0;
+}
+
+.rotate1 {
+  transform: rotate(45deg);
+}
+
+.rotate2 {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -8px;
+}
+
+.rotate3 {
+  display: none !important;
+}
+
+.accordionMenu input[type=radio] {
+  display: none;
+}
+
+.accordionMenu .content {
+  max-height: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.accordionMenu input[type=radio]:checked+label+.content {
+  max-height: 2000px;
+  height: auto;
+}
+
+.accordionMenu input[type=radio]:checked+label p svg {
+  transform: rotate(180deg);
+}
+
+.accordionMenu1 input[type=radio] {
+  display: none;
+}
+
+.accordionMenu1 .content1 {
+  max-height: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.accordionMenu1 input[type=radio]:checked+label p span .plus {
+  display: none;
+}
+
+.accordionMenu1 input[type=radio]:checked+label p span .sub {
+  transform: translateX(-10px);
+}
+
+.accordionMenu1 input[type=radio]:checked+label+.content1 {
+  max-height: 2000px;
+  height: auto;
+}
+
+#top {
+  display: none;
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  bottom: 0;
+  right: 0;
+  z-index: 30;
+}
+
+.preloader-img {
+  width: 100px;
+  height: 100px;
+  animation-name: preloader;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes preloader {
+  0% {
+    transform: scale(0.8);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
