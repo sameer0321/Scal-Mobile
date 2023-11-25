@@ -60,6 +60,7 @@ function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 };
+document.getElementById("top").addEventListener("click",backToTop)
 // preloader
 const preloader = document.getElementById("preloader");
 setTimeout(() => {

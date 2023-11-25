@@ -103,7 +103,7 @@ input::-webkit-inner-spin-button {
   height: 40px;
   bottom: 0;
   right: 0;
-  z-index: 30;
+  z-index: 19;
 }
 
 .preloader-img {
